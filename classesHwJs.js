@@ -6,7 +6,7 @@ class Pet {
 	setOwner(owner){
 		this.owner = owner
 	}
-}
+};
 
 const cat = new Pet('bob');
 cat.setOwner('Dave');
@@ -26,7 +26,7 @@ class Dog extends Pet {
 	getPrice(){
 		return this.price;
 	}
-}
+};
 
 const sparky = new Dog('Sparky', 100);
 sparky.setOwner('Robert');
@@ -34,4 +34,28 @@ sparky.bark();
 sparky.chaseTail();
 sparky.getPrice();
 console.log(sparky);
+
+class Cat extends Pet{
+	constructor(name, price){
+		super(name);
+		this.price = price;
+	}
+	purr(){
+		console.log('purrrrr');
+	}
+	clean(){
+		console.log('cleaning');
+	}
+	getPrice(){
+		return this.price;
+	}
+};
+
+const sprinkles = new Cat('Sprinkles', 200);
+sprinkles.setOwner('Karen');
+sprinkles.purr();
+sprinkles.clean();
+sprinkles.getPrice();
+console.log(sprinkles);
+
 
